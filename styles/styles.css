@@ -54,6 +54,10 @@ a {
     color: #0B132A;
 }
 
+.header__logo:hover {
+    animation: 2s linear infinite wave;
+}
+
 .header__a-1 {
     font-size: 20px;
     font-weight: 500;
@@ -65,9 +69,39 @@ a {
     font-weight: 700;
 }
 
+@keyframes wave {
+    0% {
+        text-shadow: 5px 5px 2px #F53855;
+    }
+
+    25% {
+        text-shadow: -5px 5px 2px #F53855;
+    }
+
+    50% {
+        text-shadow: -5px -5px 2px #F53855;
+    }
+
+    75% {
+        text-shadow: 5px -5px 2px #F53855;
+    }
+
+    100% {
+        text-shadow: 5px 5px 2px #F53855;
+    }
+}
+
 .header__list {
     display: flex;
     gap: 40px;
+}
+
+.header__list>li {
+    transition: text-shadow 0.3s linear;
+}
+
+.header__list>li:hover {
+    text-shadow: 1px 1px 1px #F53855;
 }
 
 .header__buttons {
@@ -78,6 +112,14 @@ a {
     font-weight: 500;
 }
 
+.header__buttons>a {
+    transition: text-shadow 0.3s linear;
+}
+
+.header__buttons>a:hover {
+    text-shadow: 1px 1px 1px #F53855;
+}
+
 .header__sign-up {
     display: inline-block;
     width: 150px;
@@ -86,6 +128,11 @@ a {
     border: 1px solid #F53855;
     background-color: transparent;
     color: #F53855;
+    transition: box-shadow 0.3s linear;
+}
+
+.header__sign-up:hover {
+    box-shadow: 3px 3px 5px #F53855;
 }
 
 /* end header styles */
@@ -140,6 +187,12 @@ a {
     font-weight: 700;
     line-height: 25px;
     z-index: 10;
+    transition: filter 0.5s ease-in-out;
+}
+
+.section-1__text>button:hover {
+    filter: drop-shadow(0 0 15px #ad1d1d);
+    cursor: pointer;
 }
 
 .section-1__text>div {
@@ -152,6 +205,98 @@ a {
     background: rgba(245, 56, 56, 0.35);
     filter: blur(27px);
     z-index: 5;
+}
+
+.main__section-1>img:hover {
+    animation: 2s linear infinite skew_wave;
+    cursor: wait;
+}
+
+@keyframes skew_wave {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+
+    5% {
+        transform: skew(2deg, 2deg);
+    }
+
+    10% {
+        transform: skew(4deg, 4deg);
+    }
+
+    15% {
+        transform: skew(6deg, 6deg);
+    }
+
+    20% {
+        transform: skew(8deg, 8deg);
+    }
+
+    25% {
+        transform: skew(10deg, 10deg);
+    }
+
+    30% {
+        transform: skew(8deg, 8deg);
+    }
+
+    35% {
+        transform: skew(6deg, 6deg);
+    }
+
+    40% {
+        transform: skew(4deg, 4deg);
+    }
+
+    45% {
+        transform: skew(2deg, 2deg);
+    }
+
+    50% {
+        transform: skew(0deg, 0deg);
+    }
+
+    55% {
+        transform: skew(-2deg, -2deg);
+    }
+
+    60% {
+        transform: skew(-4deg, -4deg);
+    }
+
+    65% {
+        transform: skew(-6deg, -6deg);
+    }
+
+    70% {
+        transform: skew(-8deg, -8deg);
+    }
+
+    75% {
+        transform: skew(-10deg, -10eg);
+    }
+
+    80% {
+        transform: skew(-8deg, -8deg);
+    }
+
+    85% {
+        transform: skew(-6deg, -6deg);
+    }
+
+    90% {
+        transform: skew(-4deg, -4deg);
+    }
+
+    95% {
+        transform: skew(-2deg, -2deg);
+    }
+
+    100% {
+        transform: skew(0deg, 0deg);
+    }
+
 }
 
 /* END SECTION 1 */
@@ -221,6 +366,30 @@ a {
     align-items: center;
 }
 
+.homework-10 {
+    background: url(../public/img/illustration-2.png);
+    background-size: cover;
+    height: 350px;
+    width: 450px;
+    background-blend-mode: hard-light;
+}
+
+.homework-10>p {
+    display: block;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    top: 300px;
+    left: 168px;
+    transition: backdrop-filter 0.3s linear;
+}
+
+.homework-10>p:hover {
+    backdrop-filter: invert(100%);
+    cursor: not-allowed;
+}
+
+
 .main__section-3>div>h3 {
     color: #0B132A;
     margin: 0 0 20px 0;
@@ -240,6 +409,14 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: start;
+}
+
+.section-3__list>li {
+    transition: transform 0.5s ease-in-out;
+}
+
+.section-3__list>li:hover {
+    transform: translateX(25px);
 }
 
 .section-3__list>li>span {
@@ -269,6 +446,13 @@ a {
     font-size: 35px;
     font-weight: 500;
     line-height: 50px;
+    transition: color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.main__section-4>h2:hover {
+    color: #F53838;
+    transform: scale(1.25, 1.25);
 }
 
 .section-4__plan {
@@ -303,6 +487,11 @@ a {
     border-radius: 10px;
     border: 2px solid #DDD;
     background: transparent;
+    transition: transform 0.3s linear;
+}
+
+.plan:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .plan__list {
@@ -338,6 +527,17 @@ a {
     border: 1px solid #F53855;
     background-color: transparent;
     color: #F53855;
+    transition: background 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.plan__button:hover {
+    background: #F53855;
+    color: #fff;
+    box-shadow: 0 5px 15px #F53838;
+    transform: scale(1.05, 1.05);
 }
 
 .section-4__plan>div>h5>span {
@@ -535,11 +735,11 @@ a {
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 .prikol-1 {
@@ -550,6 +750,7 @@ a {
     padding: 10px;
     border: 2px solid #F53838;
 }
+
 .prikol-2 {
     color: #fff;
     border-radius: 70px;
